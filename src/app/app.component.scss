@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allerta&family=Work+Sans:wght@300&display=swap');
 
 $main-blue: #389CD6;
 $pink: #EE6381;
@@ -6,7 +7,7 @@ $green: #309D5F;
 
 ::ng-deep body {
     // background-color: antiquewhite;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Allerta', sans-serif;
 }
 
 ::ng-deep body::-webkit-scrollbar {
@@ -20,13 +21,22 @@ $green: #309D5F;
 }
 
 .header {
-    height: 2rem;
+    height: 3rem;   
     text-align: center;
     padding-top: 5px;
     padding-bottom: 22px;
     border-radius: 0;
-    img {
-        height: 3rem;
+    box-shadow: none;
+    
+    .logo {
+        height: 4rem;
+    }
+
+    .search {
+        height: 1.4rem;
+        position: relative;
+        left: 20rem;
+        margin-bottom: 1.2rem;
     }
 }
 
@@ -61,9 +71,11 @@ mat-icon {
 
 .menu ul ul {
     display: none;
+    transition: display 5s;
 }
 
-.menu ul li:hover > ul{
+.menu ul li:hover > ul,
+.menu ul li:focus > ul{
     display: block;
 }
 
@@ -310,4 +322,22 @@ mat-divider {
 
 .legal {
     width: 8rem !important;
+}
+
+
+.logos {
+    width: 100%;
+    display: flex;
+    div {
+        width: 50%;
+        text-align: center;
+
+        .ulab {
+            width: 12%;
+        }
+
+        .instagram {
+            width: 4%;
+        }
+    }
 }
