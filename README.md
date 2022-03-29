@@ -15,7 +15,7 @@
 - Clonar o Repositório
 - Rodar "npm install" na pasta global do projeto
 - Rodar "ng serve" e aguardar compilar
-- Acessar o link do local host que aparecerá no terminal 
+- Acessar o link do localhost que aparecerá no terminal 
 
 ![image](https://user-images.githubusercontent.com/87042636/160514530-53a81f25-7a0f-4907-b0c9-cf9bd373b33a.png)
 
