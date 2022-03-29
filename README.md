@@ -6,12 +6,12 @@
 - Angular v10
 - Angular Material
 
-🚀Como rodar o projeto!
-É recomendavel ter instalado as versões:
+🚀Recomendavel: 
 - Node 14.15.1
 - NPM 6.14.8
 - Angular 10.1.7
 
+✨Como rodar o projeto:
 - Clonar o Repositório
 - Rodar "npm install" na pasta global do projeto
 - Rodar "ng serve" e aguardar compilar
