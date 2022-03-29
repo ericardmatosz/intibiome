@@ -19,6 +19,10 @@
 
 ![image](https://user-images.githubusercontent.com/87042636/160514530-53a81f25-7a0f-4907-b0c9-cf9bd373b33a.png)
 
-E pronto!
+OU
+
+- Ao invés de "ng serve" rode "ng serve --open", isto irá fazer a aplicação abrir no seu navegador direto após a compilação
+
+Pronto!
 
 ![image](https://user-images.githubusercontent.com/87042636/160514434-7ff502e1-d641-4fc0-a1ec-b473cfe7a6d5.png)
