@@ -1,8 +1,16 @@
+<!-- Header  -->
 <mat-card class="header">
-  <img class="logo" src="./../assets/logo-header.png">
+  <mat-icon *ngIf="this.icone === 'menu'" (click)="openMenu()">menu</mat-icon>
+  <mat-icon *ngIf="this.icone === 'close'" (click)="closeMenu()">close</mat-icon>
+
+  <div class="logo-img">
+    <img class="logo" src="./../assets/logo-header.png">
+  </div>  
+
   <img class="search" src="../assets/search.png">
 </mat-card>
 
+<!-- Menu Superior  -->
 <nav class="menu-superior">
   <ul>
     <li>about us <mat-icon>expand_more</mat-icon>
@@ -31,10 +39,30 @@
   </ul>
 </nav>
 
+<!-- Menu Mobile  -->
+<nav *ngIf="this.menu == 'open'" class="menu-mobile">
+  <ul>
+    <li>brand philosophy</li>
+    <li>product technology</li>
+    <li>all products</li>
+    <li>intibiome wellness</li>
+    <li>intibiome active</li>
+    <li>intibiome agecare</li>
+    <li>article 1</li>
+    <li>article 2</li>
+    <li>article 3</li>
+    <li>faq</li>
+    <li>contact us</li>
+  </ul>
+</nav>
+
+<!-- Banners  -->
 <div class="banner">
   <img class="banner-initial" src="../assets/banner-hero.png">
+  <img class="banner-mobile" src="../assets/banner-mobile.png">
 </div>
 
+<!-- Primeiro Texto  -->
 <div class="texting">
   <h1>we’re here to help</h1>
 
@@ -58,35 +86,45 @@
   </div>
 </div>
 
+<!-- Imagem banner  -->
 <div class="values">
     <img src="../assets/values.png">
 </div>
 
+<!-- Segundo Texto  -->
 <div class="texting your-age">
   <div class="txt">
-    <h1>
+    <h1 class="title">
       whatever your age. whatever your<br> 
       lifestyle. whatever your interests.
     </h1>
-  
-    <p>
-      Co-created with gynaecologists, our revolutionary products have been expertly<br>
-      developed to support your intimate microbiome and pH balance, and<br>
-      strengthen overall natural health.
-    </p>
-  
-    <p>
-      As the experts in intimate hygiene, we want to bring discussion about intimate<br>
-      wellness care out of the dark and demystify the taboos that surround it.
-    </p>
+
+    <h1 class="title-mobile">
+      whatever your age.<br>
+      whatever your lifestyle.<br> 
+      whatever your interests.
+    </h1>
+
+    <div class="second-txt">
+      <p>
+        Co-created with gynaecologists, our revolutionary products have been expertly
+        developed to support your intimate microbiome and pH balance, and
+        strengthen overall natural health.
+      </p>
+    
+      <p>
+        As the experts in intimate hygiene, we want to bring discussion about intimate
+        wellness care out of the dark and demystify the taboos that surround it.
+      </p>
+    </div>
   </div>
 </div>
 
-
+<!-- Produtos  -->
 <div class="our-products">
   <h1>our products</h1>
 
-  <div class="card-product">
+  <div class="card-product product-geral">
     <mat-card class="products">
       <img id="blue-img" src="../assets/Blue-Pack.png">
 
@@ -126,12 +164,60 @@
       </mat-card>
     </mat-card>
   </div>
-  
+
+  <!-- Produtos Mobile  -->
+  <div class="cdk-virtual-scroll-data-source-example product-mobile">
+    <cdk-virtual-scroll-viewport orientation="horizontal" itemSize="50" class="example-viewport cdk-scrool">
+      <div class="card-product">
+        <mat-card class="products">
+          <img id="blue-img" src="../assets/Blue-Pack.png">
+    
+          <p>
+            intibiome wellness daily<br>
+            intimate wash
+          </p>
+    
+          <mat-card class="colored-card blue">
+            <span>wellness</span>
+          </mat-card>
+        </mat-card>
+    
+        <mat-card class="products">
+          <img src="../assets/Green-Pack.png">
+    
+          <p>
+            intibiome wellness daily<br>
+            intimate wash
+          </p>
+    
+          <mat-card class="colored-card green">
+            <span>active</span>
+          </mat-card>
+        </mat-card>
+    
+        <mat-card class="products">
+          <img src="../assets/Pink-Pack.png">
+    
+          <p>
+            intibiome wellness daily<br>
+            intimate wash
+          </p>
+    
+          <mat-card class="colored-card pink">
+            <span>agecare</span>
+          </mat-card>
+        </mat-card>
+      </div>
+    </cdk-virtual-scroll-viewport>
+  </div>
 </div>
 
+<!-- Banners Inferiores  -->
 <img class="banner-bottom" src="../assets/bottom-banner.png">
+<img class="banner-creams" src="../assets/banner-creams.png">
 
-<div class="discoveries">
+<!-- Discoveries  -->
+<div class="discoveries discoveries-none">
   <h1>keep up to date with our discoveries</h1>
 
   <div class="cards-discoveries">
@@ -161,10 +247,48 @@
   </div>
 </div>
 
+<!-- Discoveries Mobile  -->
+<div class="discoveries-mobile">
+  <h1>keep up to date with our discoveries</h1>
+    <div class="cdk-virtual-scroll-data-source-example">
+      <cdk-virtual-scroll-viewport orientation="horizontal" itemSize="50" class="example-viewport">
+        <div class="discoveries">
+          <div class="cards-discoveries">
+            <mat-card>
+              <img src="../assets/discovery1.png">
+              <p>
+                Lorem ipsum dolor sit amet,<br>
+                consectetur adipiscing elit
+              </p>
+            </mat-card>
+        
+            <mat-card>
+              <img src="../assets/discovery2.png">
+              <p>
+                Lorem ipsum dolor sit amet,<br>
+                consectetur adipiscing elit
+              </p>
+            </mat-card>
+        
+            <mat-card>
+              <img src="../assets/discovery3.png">
+              <p>
+                Lorem ipsum dolor sit amet,<br>
+                consectetur adipiscing elit
+              </p>
+            </mat-card>
+          </div>
+        </div>
+      </cdk-virtual-scroll-viewport>
+    </div>
+</div>
+
+<!-- See More  -->
 <div class="see-more">
   <button mat-flat-button color="primary">see more</button>
 </div>
 
+<!-- Footer  -->
 <footer class="footer">
     <nav class="menu-footer">
       <ul>
@@ -177,6 +301,18 @@
       </ul>
     </nav>
 
+    <!-- Menu Footer Mobile  -->
+    <nav class="menu-footer-mobile">
+      <ul>
+        <li class="contact-site">contact us</li><hr>
+        <li class="faq">faq</li><hr>
+        <li class="contact-site">site map</li><hr>
+        <li class="policy-cookie">privacy policy</li><hr>
+        <li class="policy-cookie">cookies policy</li><hr>
+        <li class="legal">legal notice</li>
+      </ul>
+    </nav>
+
     <div class="logos">
       <div>
         <img class="ulab" src="../assets/ulab.png">
@@ -185,4 +321,15 @@
         <img class="instagram" src="../assets/instagram.png">
       </div>
     </div>
+
+    <div class="logos-mobile">
+      <div>
+        <img class="instagram" src="../assets/instagram.png">
+      </div>
+      <div>
+        <img class="ulab" src="../assets/ulab.png">
+      </div>
+    </div>
 </footer>
+
+
